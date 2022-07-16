@@ -13,9 +13,6 @@ In the project made above the dataset consists of details of all the data of the
  ,CASH_ADVANCE_TRX: Number of Transactions made with "Cash in Advance"
  ,PURCHASES_TRX: Number of purchase transactions made
  ,CREDIT_LIMIT: Limit of Credit Card for user
- ,PAYMENTS: Amount of Payment done by user
- ,MINIMUM_PAYMENTS: Minimum amount of payments made by user  
- ,PRC_FULL_PAYMENT: Percent of full payment paid by user
- ,TENURE: Tenure of credit card service for user
- The main objective of this project is divide the customers present in bank into atleast 3 categories based on the dataset given above.To perfrom  this task we first applied the elbow method to find out the optimal number of clusters we took the intial number of clusters to be 8 when applying the k means method. After the completion of the k means method we perfromed Autoencoders and displayed the ouptuts 
+ ,PAYMENTS: Amount of Payment done by user,MINIMUM_PAYMENTS: Minimum amount of payments made by user,,PRC_FULL_PAYMENT: Percent of full payment paid by user,TENURE: Tenure of credit card service for user
+ The main objective of this project is divide the customers present in bank into atleast 3 categories based on the dataset given above.To perfrom  this  task we first applied the elbow method to find out the optimal number of clusters we took the intial number of clusters to be 8 when applying the k means method. After the completion of the k means method we perfromed Autoencoders and displayed the ouptuts 
  

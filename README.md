@@ -1,51 +1,64 @@
-This project aims to divide bank customers into at least three categories based on their credit card usage using K means clustering. The dataset used in this project consists of various features of the customers, such as balance, purchase frequency, cash advance frequency, credit limit, etc.
+# Customer Segmentation Using K-Means Clustering
 
-**Dataset**
+## Overview
+This project applies K-Means clustering for customer segmentation based on their purchasing behavior. The dataset contains various attributes such as balance, purchase frequency, credit limit, and payment behavior. The goal is to identify distinct customer groups to optimize marketing strategies.
 
-The dataset consists of the following columns:
+## Features
+- Loads and cleans customer transaction data.
+- Handles missing values in critical columns.
+- Performs exploratory data analysis (EDA) with visualizations.
+- Identifies correlations between key financial attributes.
+- Implements K-Means clustering to segment customers.
+- Determines the optimal number of clusters using the elbow method.
+- Uses Principal Component Analysis (PCA) for dimensionality reduction and visualization.
+- Explores Autoencoders for potential feature extraction.
 
-CUSTID: Identification of Credit Card holder
+## Requirements
+Install the necessary dependencies using:
 
-BALANCE: Balance amount left in customer's account to make purchases
+```bash
+pip install numpy pandas seaborn matplotlib scikit-learn tensorflow
+```
 
-BALANCE_FREQUENCY: How frequently the balance is updated, score between 0 and 1 (1 = frequently updated, 0 = not frequently updated)
+## File Structure
+- `Marketing_data.csv` - CSV file containing customer transaction data.
+- `marketing_segmentation.ipynb` - Jupyter Notebook for data processing and clustering.
 
-PURCHASES: Amount of purchases made from account
+## How to Run
+1. Ensure the `Marketing_data.csv` file is in the working directory.
+2. Open the Jupyter Notebook and execute the cells step by step.
+3. The notebook will generate visualizations and perform customer segmentation.
 
-ONEOFFPURCHASES: Maximum purchase amount done in one-go
+## Explanation of Key Steps
+### Data Preprocessing
+- Loads the dataset and inspects its structure.
+- Handles missing values by filling them with column means.
+- Removes unnecessary columns (e.g., Customer ID).
+- Standardizes the dataset for clustering.
 
-INSTALLMENTS_PURCHASES: Amount of purchase done in installment
+### Exploratory Data Analysis (EDA)
+- Generates histograms and distribution plots for feature analysis.
+- Creates correlation heatmaps to identify relationships between variables.
+- Uses pair plots to visualize trends in purchasing behaviors.
 
-CASH_ADVANCE: Cash in advance given by the user
+### K-Means Clustering
+- Determines the optimal number of clusters using the elbow method.
+- Applies K-Means clustering to group customers based on their financial attributes.
+- Analyzes the characteristics of each customer segment.
 
-PURCHASES_FREQUENCY: How frequently the purchases are being made, score between 0 and 1 (1 = frequently purchased, 0 = not frequently purchased)
+### Principal Component Analysis (PCA)
+- Reduces data dimensions to visualize cluster separation.
+- Uses a scatter plot to display clusters in a 2D space.
 
-ONEOFF_PURCHASES_FREQUENCY: How frequently purchases are happening in one-go (1 = frequently purchased, 0 = not frequently purchased)
+### Autoencoders (Experimental)
+- Implements a neural network-based autoencoder for feature extraction.
+- Uses TensorFlow/Keras to encode and decode customer data.
 
-PURCHASES_INSTALLMENTS_FREQUENCY: How frequently purchases in installments are being done (1 = frequently done, 0 = not frequently done)
+## Output
+- Clustered customer groups based on transaction patterns.
+- Insights into different customer types, such as transactors, revolvers, and VIPs.
+- Visualizations for better understanding of data distribution and segmentation.
 
-CASH_ADVANCE_FREQUENCY: How frequently the cash in advance is being paid
+## License
+This project is open-source and can be used for educational and research purposes.
 
-CASH_ADVANCE_TRX: Number of Transactions made with "Cash in Advance"
-
-PURCHASES_TRX: Number of purchase transactions made
-
-CREDIT_LIMIT: Limit of Credit Card for user
-
-PAYMENTS: Amount of Payment done by user
-
-MINIMUM_PAYMENTS: Minimum amount of payments made by user
-
-PRC_FULL_PAYMENT: Percent of full payment paid by user
-
-TENURE: Tenure of credit card service for user
-
-**Methodology**
-
-To perform the task of dividing the customers into different categories, we first applied the elbow method to determine the optimal number of clusters. After analysis, we decided to proceed with eight initial clusters in the K means method.
-
-Once the K means clustering was completed, we performed Autoencoders to further analyze the outputs.
-
-**Conclusion**
-
-Through this project, we successfully divided bank customers into different categories based on their credit card usage, which could be helpful for marketing and improving customer experience.
